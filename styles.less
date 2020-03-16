@@ -9,7 +9,8 @@
 
 body {
   .FiraSans; .regular;
-  color: fadeout(@Black, 16%);
+  background-color: @Black;
+  color: @White;
 
   .container {
     padding-top: 1.5rem * 2; padding-bottom: 1.5rem;
@@ -30,8 +31,9 @@ body {
       .col {
 
         .card {
-          border-color: fadeout(@Black, 84%);
-          border-radius: 0;
+          background-color: lighten(@Black, 8%);
+          border: 0;
+          border-radius: .5rem;
 
           .card-body {
             padding: 0;
@@ -43,14 +45,25 @@ body {
               margin-bottom: 0;
               min-height: 5.5rem;
               padding: 1.28rem;
+              position: relative;
+
+              > span {
+                position: absolute;
+                top: .35rem; right: .25rem;
+              }
 
               a {
-                color: fadeout(@Black, 16%);
+                color: @White;
 
                 &:focus,
                 &:hover {
                 }
               }
+            }
+
+            .embed-responsive {
+              border-top-left-radius: 0; border-top-right-radius: 0;
+              height: 80px;
             }
           }
         }
@@ -67,7 +80,7 @@ body {
 }
 
 .bar {
-  background: @Black;
+  background: @White;
   height: 3px; width: 3px;
   position: absolute;
   bottom: 1px;
