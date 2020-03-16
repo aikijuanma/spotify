@@ -55,10 +55,25 @@ body {
               }
 
               a {
-                color: @White;
+                color: darken(@White, 16%);
+                transition: color .16s ease-in-out;
 
                 &:focus,
                 &:hover {
+                  color: @White;
+                  text-decoration: none;
+
+                  > i {
+                    .visible;
+                  }
+                }
+
+                i {
+                  .invisible;
+                  color: @Green;
+                  font-size: .8em;
+                  transition: visibility .16s ease-in-out;
+                  vertical-align: middle;
                 }
               }
             }
