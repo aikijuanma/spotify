@@ -9,7 +9,8 @@
 
 body {
   .FiraSans; .regular;
-  color: fadeout(@Black, 16%);
+  background-color: @Black;
+  color: @White;
 
   .container {
     padding-top: 1.5rem * 2; padding-bottom: 1.5rem;
@@ -25,34 +26,29 @@ body {
       }
     }
 
-    .row {
+    .list-group {
 
-      .col {
+      .list-group-item {
+        background-color: lighten(@Black, 5%);
+        border: 0;
+        border-radius: .5rem;
+        height: 80px + 32; width: 100%;
+        margin: 0 0 1rem 0;
+        overflow: hidden !important;
+        padding: 1rem;
 
-        .card {
-          border-color: fadeout(@Black, 84%);
-          border-radius: 0;
+        &:first-child {
+          // border-top-left-radius: 0;
+          // border-top-right-radius: 0;
+        }
 
-          .card-body {
-            padding: 0;
+        &:last-child {
+          // border-bottom-left-radius: 0;
+          // border-bottom-right-radius: 0;
+        }
 
-            .card-title {
-              .medium;
-              font-size: .8rem;
-              line-height: .96rem;
-              margin-bottom: 0;
-              min-height: 5.5rem;
-              padding: 1.28rem;
-
-              a {
-                color: fadeout(@Black, 16%);
-
-                &:focus,
-                &:hover {
-                }
-              }
-            }
-          }
+        .embed-responsive {
+          height: 80px;
         }
       }
     }
@@ -67,7 +63,7 @@ body {
 }
 
 .bar {
-  background: @Black;
+  background: @White;
   height: 3px; width: 3px;
   position: absolute;
   bottom: 1px;
